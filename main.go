@@ -16,7 +16,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	port := os.Getenv("Port")
+	port := 8080
 	if port == "" {
 		log.Fatal("No port Provided")
 	}
