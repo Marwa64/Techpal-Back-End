@@ -15,7 +15,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	port := "8080"
+	port := "80"
 
 	gin.SetMode(gin.ReleaseMode)
 	router := gin.New()
