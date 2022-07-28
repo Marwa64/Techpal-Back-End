@@ -8,6 +8,7 @@ import (
 	"github.com/joho/godotenv"
 	"log"
 	"net/http"
+	"os"
 )
 
 func main() {
@@ -15,7 +16,10 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	port := "80"
+	port := os.Getenv("Port")
+	if port == "" {
+		log.Fatal("No port Provided")
+	}
 
 	gin.SetMode(gin.ReleaseMode)
 	router := gin.New()
